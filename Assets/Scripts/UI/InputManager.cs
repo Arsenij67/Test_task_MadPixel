@@ -1,7 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using Game.CubeNS;
+using UnityEngine.EventSystems;
+
 namespace Game.UI {
     public class InputManager :MonoBehaviour {
 
@@ -25,15 +26,18 @@ namespace Game.UI {
         }
 
         private void Update() {
+            //перемещение
             if (!waiting && !inGameUIManager.inGameManager.IsGameOver) {
-                if (Input.GetMouseButton(0)) MouseInput();
+                if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject()) MouseInput();
                 if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) 
                     ArrowInput(Vector3.left);
                 else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
                     ArrowInput(Vector3.right);
+                // кидание
                 if (isPressed && !Input.GetMouseButton(0)
                     && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.LeftArrow)
-                    && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.RightArrow)) {
+                    && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.RightArrow)
+                    && !EventSystem.current.IsPointerOverGameObject()) {
                     isPressed = false;
 
                     Cube cube = inGameUIManager.inGameManager.CubeGO.GetComponent<Cube>();
