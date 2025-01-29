@@ -22,7 +22,7 @@ namespace Game.UI {
             base.Init(isOpen);
             okButton.onClick.AddListener(CloseSettingMenu);
             closeButton.onClick.AddListener(CloseSettingMenu);
-
+          
             restartButton.onClick.AddListener(RestartGame);
             backToMenuButton.onClick.AddListener(BackToMenu);
             musicButton.onClick.AddListener(ChangeMusic);
