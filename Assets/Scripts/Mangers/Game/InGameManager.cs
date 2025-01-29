@@ -12,7 +12,6 @@ namespace Game {
         [Header("MainCube")]
         [SerializeField] GameObject cubePrefab;
         [SerializeField] private Vector3 startPosition = new Vector3(0, 0.5f, 6.20f);
-        
         public GameObject CubeGO {
             get { return cube; }
         }
@@ -125,8 +124,8 @@ namespace Game {
             get { return isGameOver; }
         }
         private bool isGameOver = false;
-        public void RestartGame() => ChangeScene(0);
+        public void RestartGame() => ChangeScene(SceneManager.GetActiveScene().buildIndex);
         public void BackToMenu() => ChangeScene(0);
-        private void ChangeScene(int i) => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + i);
+        private void ChangeScene(int i) => SceneManager.LoadScene(i);
     }
 }
