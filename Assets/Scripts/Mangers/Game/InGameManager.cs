@@ -38,14 +38,27 @@ namespace Game {
                 if(score > GetScore()) {
                     PlayerPrefs.SetInt("Score", score);
                 }
-                inGameUIManager.inGameUi.SetScore(score, GetScore());
+                inGameUIManager.inGameUi.SetScore(score, Record);
             }
             get { return score; }
         }
         private int score = 0;
 
+        public int Record
+        {
+            get { 
+                if (score > GetScore())
+                {
+                    PlayerPrefs.SetInt("cubeScore", score);
+                    return score;
+                }
+                else
+                   return GetScore();
+            }
+        }
 
-        private int GetScore() { return PlayerPrefs.GetInt("cubeScore", 0); }
+
+        private int GetScore() { return PlayerPrefs.GetInt("cubeScore"); }
         public Vector3 Boards {
             get { return boards; }
         }
@@ -57,7 +70,7 @@ namespace Game {
             NewCube();
             GenerateOtherCubs();
 
-            inGameUIManager.inGameUi.SetScore(score, GetScore());
+            inGameUIManager.inGameUi.SetScore(score, Record);
         }
         
         public void NewCube() {
