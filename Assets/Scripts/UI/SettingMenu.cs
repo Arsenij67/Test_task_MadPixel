@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using YG;
 using UnityEngine;
 using UnityEngine.UI;
 namespace Game.UI {
@@ -11,7 +10,7 @@ namespace Game.UI {
         [SerializeField] Button restartButton;
         [SerializeField] Button backToMenuButton;
 
-
+        [SerializeField] private string rewardID = "RestartGame";
         [SerializeField] Button okButton;
         [SerializeField] Button closeButton;
         [Header("music")]
@@ -22,8 +21,7 @@ namespace Game.UI {
             base.Init(isOpen);
             okButton.onClick.AddListener(CloseSettingMenu);
             closeButton.onClick.AddListener(CloseSettingMenu);
-          
-            restartButton.onClick.AddListener(RestartGame);
+            restartButton.onClick.AddListener(ShowRewardAdv);
             backToMenuButton.onClick.AddListener(BackToMenu);
             musicButton.onClick.AddListener(ChangeMusic);
 
@@ -33,6 +31,10 @@ namespace Game.UI {
         }
 
         private void CloseSettingMenu() => inGameUIManager.CloseSetting();
+        private void ShowRewardAdv()
+        {
+            YG2.RewardedAdvShow(rewardID, RestartGame);
+        }
         private void RestartGame() => inGameUIManager.inGameManager.RestartGame();
         private void BackToMenu() => inGameUIManager.inGameManager.BackToMenu();
         private void ChangeMusic() {

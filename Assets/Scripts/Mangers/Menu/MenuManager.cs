@@ -36,7 +36,11 @@ namespace Menu {
             }
         }
 
-        public void PlayGame() => ChangeScene(1);
+        public void PlayGame()
+        {
+            Debug.Log(0);
+            ChangeScene(1);
+        }
 
         private void ChangeScene(int i) => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + i);
     }
