@@ -8,7 +8,8 @@ namespace Game {
     public class InGameManager :MonoBehaviour {
 
         public InGameUIManager inGameUIManager;
-        public AudioSwitcher audioSwitcher;
+        [HideInInspector]
+        public AudioSwitcher audioSwitcher = AudioSwitcher.Instance;
         [Header("MainCube")]
         [SerializeField] GameObject cubePrefab;
         [SerializeField] private Vector3 startPosition = new Vector3(0, 0.5f, 6.20f);
