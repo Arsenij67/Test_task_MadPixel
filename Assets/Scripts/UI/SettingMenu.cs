@@ -28,6 +28,9 @@ namespace Game.UI {
             //TODO SAVE Music Value
             musicOff.gameObject.SetActive(true);
             musicOn.gameObject.SetActive(false);
+
+            //TODO OPEN STICKY ADV
+            YG2.StickyAdActivity(true);
         }
 
         private void CloseSettingMenu() => inGameUIManager.CloseSetting();
