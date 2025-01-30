@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Game.CubeNS;
 using Game.Audio;
+using YG;
 namespace Game {
     public class InGameManager :MonoBehaviour {
 
@@ -35,7 +36,8 @@ namespace Game {
             set { 
                 score += value; 
                 if(score > GetScore()) {
-                    PlayerPrefs.SetInt("Score", score);
+                    YG2.saves.record = score;
+                    YG2.SaveProgress();
                 }
                 inGameUIManager.inGameUi.SetScore(score, Record);
             }
@@ -48,7 +50,7 @@ namespace Game {
             get { 
                 if (score > GetScore())
                 {
-                    PlayerPrefs.SetInt("cubeScore", score);
+                    YG2.saves.record = score;
                     return score;
                 }
                 else
@@ -57,7 +59,7 @@ namespace Game {
         }
 
 
-        private int GetScore() { return PlayerPrefs.GetInt("cubeScore"); }
+        private int GetScore() { return YG2.saves.record ; }
         public Vector3 Boards {
             get { return boards; }
         }

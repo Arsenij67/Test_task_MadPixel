@@ -11,6 +11,7 @@ namespace Menu {
         public void Init() {
             playGameButton.onClick.AddListener(PlayGame);
             langText.text = YG2.envir.language;
+      
         }
 
         private void PlayGame() => menuManager.PlayGame();
