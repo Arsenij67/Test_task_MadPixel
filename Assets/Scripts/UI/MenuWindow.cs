@@ -11,6 +11,7 @@ namespace Game.UI {
             gameObject.SetActive(startOpened);
             _initialized = true;
         }
+
         void Start() {
             if (!_initialized) Init();
         }

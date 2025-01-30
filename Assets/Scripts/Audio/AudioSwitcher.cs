@@ -3,7 +3,8 @@ namespace Game.Audio
 {
     public class AudioSwitcher : MonoBehaviour
     {
-        private static AudioSwitcher _instance;
+        private static AudioSwitcher _instance = null;
+        public bool IsOn = true;
         public static AudioSwitcher Instance
         {
             get
@@ -14,6 +15,7 @@ namespace Game.Audio
                     GameObject singletonObject = new GameObject(typeof(AudioSwitcher).Name);
                     _instance = singletonObject.AddComponent<AudioSwitcher>();
                     DontDestroyOnLoad(singletonObject);
+              
                 }
                 return _instance;
             }
@@ -35,6 +37,7 @@ namespace Game.Audio
 
         public void SwitchVolume(bool value)
         {
+            IsOn = value;
             AudioListener.volume = value ? 1 : 0; // Устанавливаем громкость в 0 или 1 на основе значения
         }
     }
