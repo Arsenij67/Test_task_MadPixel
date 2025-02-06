@@ -29,7 +29,7 @@
         {
             if (!gameReadyDone)
             {
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_WEBGL
                 if (!infoYG.Basic.autoGRA)
                     Message("Game Ready API (manual call)");
 #endif
