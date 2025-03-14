@@ -15,28 +15,23 @@ MonoBehaviour:
   Authorization:
     scopes: 1
     playerPhotoSize: 1
-    authorized: 1
+    authorized: 0
     playerName: Player current
     uniqueID: 000
     playerPhoto: demo image
-    payingStatus: 0
+    payingStatus: 3
   InterstitialAdv:
     showFirstAdv: 1
-    interAdvInterval: 60
-    postponeCallByFail: 0
+    interAdvInterval: 0
+    postponeCallByFail: 1
     postponeCallTimer: 10
     labelAdvSimLabel: 0
   RewardedAdv:
     rewardedAfterClosing: 1
     skipInterAdvAfterReward: 0
     labelAdvSimLabel: 0
-  Storage:
-    saveLocal: 0
-    saveCloud: 1
-    saveCloudInterval: 0
-    flush: 0
   Basic:
-    platform: {fileID: 11400000, guid: c2a303d33a9fd394bae4c4b88b9a1c44, type: 2}
+    platform: {fileID: 0}
     autoApplySettings: 1
     autoPauseGame: 1
     editEventSystem: 1
@@ -49,8 +44,8 @@ MonoBehaviour:
     simulationLoadScene: 0
   Simulation:
     device: 0
-    language: ru
-    advIntervalSimulation: 60
+    language: en
+    advIntervalSimulation: 0
     durationAdv: 0.5
     loadAdv: 0
     testFailAds: 0
@@ -62,7 +57,7 @@ MonoBehaviour:
       angleInclination: 140
       color1: {r: 1, g: 0.831, b: 0.149, a: 1}
       color2: {r: 0.36, g: 0.09, b: 1, a: 1}
-    customProgressBar: 1
+    customProgressBar: 0
     progressBarSettigs:
       round: 1
       roundAngle: 10
@@ -88,8 +83,6 @@ MonoBehaviour:
     interAdvInterval: 0
     postponeCallByFail: 0
     skipInterAdvAfterReward: 0
-    saveLocal: 0
-    saveCloud: 0
     selectWebGLTemplate: 1
     runInBackground: 1
     enableExceptions: 1
