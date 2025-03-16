@@ -9,7 +9,7 @@ namespace Game.UI {
         [SerializeField] InGameUIManager inGameUIManager;
         [SerializeField] Button settingButton;
         [SerializeField] TextMeshProUGUI currScoreText;
-        [SerializeField] TextMeshProUGUI recordScoreText;
+  
 
         public override void Init(bool isOpen = false) {
             base.Init(isOpen);
@@ -20,7 +20,6 @@ namespace Game.UI {
 
         public void SetScore(int score, int hightScore) {
             currScoreText.text = score.ToString();
-            recordScoreText.text = "Hight score: " + hightScore.ToString();
         }
     }
 }
