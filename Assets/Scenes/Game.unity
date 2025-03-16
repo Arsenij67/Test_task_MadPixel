@@ -251,7 +251,6 @@ MonoBehaviour:
   inGameUIManager: {fileID: 1052250255}
   settingButton: {fileID: 256688586}
   currScoreText: {fileID: 653714251}
-  recordScoreText: {fileID: 1208100287}
 --- !u!1 &177036930
 GameObject:
   m_ObjectHideFlags: 0
@@ -3533,7 +3532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMPComponent: {fileID: 1208100287}
-  uniqueFontTMP: {fileID: 0}
+  uniqueFontTMP: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   textLComponent: {fileID: 0}
   info:
     domainAutoLocalization: com
@@ -4158,7 +4157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1417108898
 RectTransform:
   m_ObjectHideFlags: 0
