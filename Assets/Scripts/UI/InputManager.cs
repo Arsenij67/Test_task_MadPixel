@@ -61,9 +61,9 @@ namespace Game.UI {
             var cubePosition = inGameUIManager.inGameManager.CubeGO.GetComponent<Cube>().Position * 0.15f / 3.85f;
 
             if (cubePosition.x - worldPointPos.x > deltaSwipe)
-                inGameUIManager.inGameManager.CubeGO.GetComponent<Cube>().MoveToSide(Vector3.left*2);
+                inGameUIManager.inGameManager.CubeGO.GetComponent<Cube>().MoveToSide(Vector3.left);
             else if(cubePosition.x - worldPointPos.x < -deltaSwipe)
-                inGameUIManager.inGameManager.CubeGO.GetComponent<Cube>().MoveToSide(Vector3.right*2);
+                inGameUIManager.inGameManager.CubeGO.GetComponent<Cube>().MoveToSide(Vector3.right);
             else inGameUIManager.inGameManager.CubeGO.GetComponent<Cube>().MoveToSide(Vector3.zero);
         }
         private void ArrowInput(Vector3 vector) {

@@ -5,7 +5,7 @@ namespace Game.CubeNS {
     public class BaseCube :MonoBehaviour {
         protected Rigidbody rigidbody;
         [SerializeField] protected CubeView cubeView;
-
+        [SerializeField] private float speedLeftRight = 1.5f;
         public int currNum;
         public int currIntOfArr;
 
@@ -41,7 +41,11 @@ namespace Game.CubeNS {
             dropAudio.Play();
         }
 
-        public void MoveToSide(Vector3 vector) => rigidbody.velocity = vector;
+        public void MoveToSide(Vector3 vector) {  
+            rigidbody.velocity = vector*speedLeftRight;
+
+        }
+
         public Vector3 Position {
             get { return transform.position; }
         }

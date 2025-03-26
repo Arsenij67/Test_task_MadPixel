@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Game.CubeNS {
     public class Cube :BaseCube {
         [SerializeField] InGameManager inGameManager;
-
+       
 
         public bool IsPushed {
             set { isPushed = value; }

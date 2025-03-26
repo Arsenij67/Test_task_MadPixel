@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17768493, g: 0.22246066, b: 0.30463666, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -642,7 +641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMPComponent: {fileID: 220876077}
+  textMPComponent: {fileID: 0}
   uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   info:
@@ -2442,7 +2441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMPComponent: {fileID: 770636460}
+  textMPComponent: {fileID: 0}
   uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   info:
@@ -3531,8 +3530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMPComponent: {fileID: 1208100287}
-  uniqueFontTMP: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  textMPComponent: {fileID: 0}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   info:
     domainAutoLocalization: com
@@ -5174,7 +5173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMPComponent: {fileID: 1938327697}
+  textMPComponent: {fileID: 0}
   uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   info:
@@ -5695,7 +5694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMPComponent: {fileID: 2127048918}
+  textMPComponent: {fileID: 0}
   uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   info:

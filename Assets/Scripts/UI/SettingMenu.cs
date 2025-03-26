@@ -25,9 +25,6 @@ namespace Game.UI {
             backToMenuButton.onClick.AddListener(BackToMenu);
             musicButton.onClick.AddListener(ChangeMusic);
 
-            //TODO SAVE Music Value
-            musicOff.gameObject.SetActive(true);
-            musicOn.gameObject.SetActive(false);
 
             //TODO OPEN STICKY ADV
             YG2.StickyAdActivity(true);
@@ -41,18 +38,17 @@ namespace Game.UI {
         private void RestartGame() => inGameUIManager.inGameManager.RestartGame();
         private void BackToMenu() => inGameUIManager.inGameManager.BackToMenu();
         private void ChangeMusic() {
-            if (musicOff.gameObject.activeSelf) MusicSwitcher(false);
-            else MusicSwitcher(true);
+            MusicSwitcher(!musicOff.gameObject.activeSelf);
         }
 
         private void MusicSwitcher(bool value) {
 
-            musicOff.gameObject.SetActive(!inGameUIManager.inGameManager.audioSwitcher.IsOn);
-            musicOn.gameObject.SetActive(inGameUIManager.inGameManager.audioSwitcher.IsOn);
+            musicOff.gameObject.SetActive(value);
+            musicOn.gameObject.SetActive(!value);
             inGameUIManager
                 .inGameManager
                 .audioSwitcher
-                .SwitchVolume(value);
+                .SwitchVolume(!value);
    
         }
 
