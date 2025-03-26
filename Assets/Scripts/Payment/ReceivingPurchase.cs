@@ -24,19 +24,24 @@ public class ReceivingPurchase : MonoBehaviour
 
     private void SuccessPurchased(string id)
     {
-        // Ваш код для обработки покупки, например:
-        string coinsKey = "coins";
-        int coins = YG2.GetState(coinsKey);
+    
+        string advKey = "isAdvActived";
+
+         bool isActived = System.Convert.ToBoolean(YG2.GetState(advKey));
 
         if (id == "noAds")
-            YG2.SetState(coinsKey, coins + 50);
+        {
+            if (!isActived)
+            {
+                YG2.SetState(advKey, 1);
+            }
+        }
         ClosePurchaseWindow();
         
     }
 
     public void OpenPurchaseWindow()
     {
-        Debug.Log(999);
         transform.gameObject.SetActive(true);
     }
 
