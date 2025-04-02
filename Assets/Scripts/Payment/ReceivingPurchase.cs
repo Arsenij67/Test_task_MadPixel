@@ -27,13 +27,14 @@ public class ReceivingPurchase : MonoBehaviour
     
         string advKey = "isAdvActived";
 
-         bool isActived = System.Convert.ToBoolean(YG2.GetState(advKey));
+        bool isActived = YG2.saves.isAdvActive;
 
         if (id == "noAds")
         {
-            if (!isActived)
+            if (isActived)
             {
-                YG2.SetState(advKey, 1);
+                YG2.saves.isAdvActive = false;
+                YG2.SaveProgress();
             }
         }
         ClosePurchaseWindow();

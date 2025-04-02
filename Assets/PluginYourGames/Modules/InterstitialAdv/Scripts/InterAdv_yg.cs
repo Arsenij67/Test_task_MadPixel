@@ -85,8 +85,9 @@ namespace YG
                 return;
             }
 
-            if (!nowAdsShow && isTimerAdvCompleted)
+            if (!nowAdsShow && isTimerAdvCompleted && YG2.saves.isAdvActive)
             {
+        
                 onAdvNotification?.Invoke();
 #if UNITY_EDITOR
                 Message("Interstitial Adv");

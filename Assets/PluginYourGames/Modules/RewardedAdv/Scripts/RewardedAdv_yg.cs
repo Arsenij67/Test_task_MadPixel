@@ -27,7 +27,7 @@ namespace YG
         {
             Message("Rewarded Ad Show");
 
-            if (!nowInterAdv && !nowRewardAdv)
+            if (!nowInterAdv && !nowRewardAdv && YG2.saves.isAdvActive)
             {
                 if (id == string.Empty || id == null)
                     id = "null";

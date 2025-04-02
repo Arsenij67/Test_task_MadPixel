@@ -27,13 +27,13 @@ namespace Game.UI {
 
 
             //TODO OPEN STICKY ADV
-            YG2.StickyAdActivity(true);
+            YG2.StickyAdActivity(YG2.saves.isAdvActive);
         }
 
         private void CloseSettingMenu() => inGameUIManager.CloseSetting();
         private void ShowRewardAdv()
         {
-            YG2.RewardedAdvShow(rewardID, RestartGame);
+           YG2.RewardedAdvShow(rewardID, RestartGame);
         }
         private void RestartGame() => inGameUIManager.inGameManager.RestartGame();
         private void BackToMenu() => inGameUIManager.inGameManager.BackToMenu();

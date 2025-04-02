@@ -6,7 +6,7 @@ namespace YG
 {
     public partial class SavesYG
     {
-       public int record;
-         
+        public int record = 0;
+        public bool isAdvActive = true;
     }
 }

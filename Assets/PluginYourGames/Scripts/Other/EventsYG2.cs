@@ -159,7 +159,10 @@ namespace YG
         }
 
 #if InterstitialAdv_yg
-        public void _InterstitialAdvShow() => YG2.InterstitialAdvShow();
+        public void _InterstitialAdvShow()
+        {
+            YG2.InterstitialAdvShow();
+        }
         public void _ResetTimerInterAdv() => YGInsides.ResetTimerInterAdv();
         public void _FirstInterAdvShow_optionalPlatform() => YG2.optionalPlatform.FirstInterAdvShow();
         public void _OtherInterAdvShow_optionalPlatform() => YG2.optionalPlatform.OtherInterAdvShow();
@@ -170,7 +173,10 @@ namespace YG
         private void OnErrorInterAdv() => Execute(EventYG2Type.ErrorInterAdv);
 #endif
 #if RewardedAdv_yg
-        public void _RewardedAdvShow(string id) => YG2.RewardedAdvShow(id);
+        public void _RewardedAdvShow(string id)
+        {
+            YG2.RewardedAdvShow(id);
+        }
         public void _LoadRewardedAdv_optionalPlatform() => YG2.optionalPlatform.LoadRewardedAdv();
 
         private void OnOpenRewardedAdv() => Execute(EventYG2Type.OpenRewardedAdv);
